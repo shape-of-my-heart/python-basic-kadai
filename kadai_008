@@ -1,0 +1,12 @@
+import random
+
+num = random.randint(1, 10)
+
+print (num)
+
+if num == 3 or 6 or 9:
+    print("Fizz")
+elif num == 5 or 10:
+    print("Buzz")
+else: 
+    print("var")

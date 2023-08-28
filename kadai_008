@@ -1,9 +1,11 @@
 import random
 
-num = random.randint(1, 10)
+num = random.randint(1, 15)
 
 print(num)
 
+if num % 15 == 0 :
+    print("FizzBuzz")
 if num % 3 == 0 : 
     print("Fizz")  
 elif num % 5 == 0 :

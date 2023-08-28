@@ -4,9 +4,9 @@ num = random.randint(1, 15)
 
 print(num)
 
-if num % 15 == 0 :
+if num % 5 == 0 and num % 3 == 0 :
     print("FizzBuzz")
-if num % 3 == 0 : 
+elif num % 3 == 0 : 
     print("Fizz")  
 elif num % 5 == 0 :
     print("Buzz") 

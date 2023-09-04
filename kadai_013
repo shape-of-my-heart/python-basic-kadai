@@ -1,7 +1,0 @@
-def add_two_arguments(price, tax):
- 
- total = price * tax
-
- print(f"{total}円")
-
-add_two_arguments(1200, 1.1)

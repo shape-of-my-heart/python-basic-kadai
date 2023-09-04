@@ -1,7 +1,7 @@
-def calculate_total(price):
+def add_two_arguments(price, tax):
  
- total = price * 1.10
+ total = price * tax
 
  print(f"{total}円")
 
-calculate_total(1200)
+add_two_arguments(1200, 1.1)

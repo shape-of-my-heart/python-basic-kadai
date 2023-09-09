@@ -1,12 +1,12 @@
+
 def i ( kingaku, rate=0.1 ):
- 
+
   tax = kingaku * rate
   total = kingaku + tax
- 
-  return total,tax
- 
+
+  return total
+
 kingaku =100
- 
-kingaku, tax = i (kingaku)
-print( "税込", kingaku)
-print( "税", tax)
+
+kingaku = i (kingaku)
+print(kingaku)

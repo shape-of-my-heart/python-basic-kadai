@@ -7,8 +7,8 @@ class Human:
 name = Human()
 age = Human()
 
-name = "名前"
-age = "年齢"
+name = "太郎"
+age = "20歳"
 
 print(name)
 print (age)

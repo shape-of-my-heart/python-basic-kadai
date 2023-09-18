@@ -1,14 +1,18 @@
 class Human:
-   def __init__(printinfo):
+  
+   def __init__(printinfo, name, age):
+     printinfo.name = name
+     printinfo.age = age
 
-     printinfo.name = ""
-     printinfo.age = ""
+   def set_name(printinfo, name, age):
+     printinfo.name = name
+     printinfo.age = age
 
-name = Human()
-age = Human()
+   def show_name(printinfo):
+     print(printinfo.name)
+     print(printinfo.age)
 
-name = "太郎"
-age = "20歳"
+human = Human("名前","年齢")
 
-print(name)
-print (age)
+print(human.name)
+print(human.age)

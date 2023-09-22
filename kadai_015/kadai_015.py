@@ -10,4 +10,4 @@ class Human:
 
 human = Human('太郎',20)
 
-human.show_name()
+human.printinfo()

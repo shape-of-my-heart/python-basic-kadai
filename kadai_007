@@ -1,0 +1,14 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+import japanize_matplotlib
+
+category_df = pd.read_csv('category.csv')
+df = pd.merge(df, category_df[['商品番号', 'カテゴリー']], how='inner', on='商品番号')
+
+category_counts = df['カテゴリー'].value_counts()
+
+df['カテゴリー'].value_counts().plot(kind='bar')
+plt.show()
+
+df.groupby('商品番号')['注文数'].describe()

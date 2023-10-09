@@ -1,0 +1,48 @@
+from sklearn.datasets import load_wine
+
+dataset = load_wine()
+dataset
+
+dataset.data
+dataset.feature_names
+
+import pandas as pd
+df = pd.DataFrame(data=dataset.data, columns=dataset.feature_names)
+df.head()
+
+dataset.target
+
+df['category'] = dataset.target
+df.head()
+
+df.shape
+
+X = dataset.data
+y = dataset.target
+
+from sklearn.model_selection import train_test_split
+
+train_test_split(X, y, test_size=0.3, random_state=5)
+# 以下のようにrandom_stateを指定しない場合、実行毎に結果が異なります。
+# train_test_split(X, y, test_size=0.3)
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=5)
+
+print(X.shape, X_train.shape, X_test.shape, y.shape, y_train.shape, y_test.shape)
+
+from sklearn.ensemble import RandomForestClassifier
+
+model = RandomForestClassifier(random_state=3)
+# 以下のようにrandom_stateを指定しない場合、最終的に生成される予測モデルが実行毎に異なる可能性があります。これは、モデルの評価結果や予測結果が実行毎に変わってしまう可能性があること意味します。
+# model = DecisionTreeClassifier()
+
+model.fit(X_train, y_train)
+y_pred = model.predict(X_test)
+y_pred
+
+y_test
+
+from sklearn.metrics import accuracy_score
+
+accuracy_score(y_test, y_pred)
+
